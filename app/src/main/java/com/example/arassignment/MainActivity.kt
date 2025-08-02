@@ -11,6 +11,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.example.arassignment.ui.theme.ARAssignmentTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,6 +26,19 @@ class MainActivity : ComponentActivity() {
                 ARApp()
 
             }
+        }
+    }
+}
+
+
+@Composable
+fun ARApp() {
+    val navController = rememberNavController()
+    NavHost(navController, startDestination = "drill_selection") {
+        composable("drill_selection") { DrillSelectionScreen(navController) }
+        composable("drill_detail/{drill}") { backStackEntry ->
+            val drill = backStackEntry.arguments?.getString("drill") ?: ""
+            DrillDetailScreen(drill, navController)
         }
     }
 }

@@ -11,9 +11,9 @@ This project demonstrates a simple ARCore-based Android application using Scenef
 
 ## 🧩 Dependencies (build.gradle)
 ```
-implementation "com.google.ar:core:1.33.0"
-implementation "com.gorisse.thomas.sceneform:core:1.19.6"
-implementation "com.gorisse.thomas.sceneform:ux:1.19.6"
+implementation ("com.google.ar:core:1.33.0")
+implementation ("com.gorisse.thomas.sceneform:core:1.19.6")
+implementation ("com.gorisse.thomas.sceneform:ux:1.19.6")
 ```
 
 ## 📄 Manifest Configuration (AndroidManifest.xml)

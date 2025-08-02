@@ -5,7 +5,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -18,7 +17,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Build
-import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.material3.Button
@@ -299,7 +297,7 @@ fun DrillDetailScreen(drill: String, navController: NavController) {
                         containerColor = Color(0xFF6C63FF)
                     )
                 ) {
-                    Icon(painterResource(R.drawable.baseline_camera_24), contentDescription = null, tint = Color.White)
+                    Icon(painterResource(R.drawable.camera), contentDescription = null, tint = Color.White)
                     Spacer(Modifier.width(8.dp))
                     Text("Open AR View", color = Color.White)
                 }
